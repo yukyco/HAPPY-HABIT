@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bootbusiness | Short description about company">
+    <meta name="author" content="Your name">
+    <title>Art Box</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap responsive -->
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <!-- Font awesome - iconic font with IE7 support --> 
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/font-awesome-ie7.css" rel="stylesheet">
+    <!-- Bootbusiness theme -->
+	<link href="css/boot-business.css" rel="stylesheet">
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<!--slide style-->
+	<style type="text/css">
+		#slideshow {
+		   float: right;
+		   }
+		#slideshow img {
+			position: absolute;
+			top: 460px;
+			right: 200px;
+			z-index: 1;
+			opacity: 0.0;
+		}
+		#slideshow img.active {
+			z-index: 10;
+			opacity: 1.0;
+		}
+		#slideshow img.last-active {
+			z-index: 9;
+		}
+</style>
+
+	<!-- jQuery 読み込み -->	
+	 <script type="text/javascript" src="js/jquery-1.9.0.min.js"></script> 
+
+	<!-- ふわっと切り替えるスクリプト(jQuery利用) -->
+     <script type="text/javascript">
+
+		function slideSwitch() {
+			var $active = $('#slideshow img.active');
+
+			if ( $active.length == 0 ) $active = $('#slideshow img:last');
+
+			var $next =  $active.next().length ? $active.next()
+			    : $('#slideshow img:first');
+
+			$active.addClass('last-active');
+
+			$next.css({opacity: 0.0})
+			    .addClass('active')
+			    .animate({opacity: 1.0}, 1000, function() {
+			        $active.removeClass('active last-active');
+			    });
+		}
+
+		$(function() {
+		    setInterval( "slideSwitch()", 3000 );
+		});
+
+	</script>
+	
+  </head>
+  <body>
+    <!-- Start: HEADER -->
+    <header>
+      <!-- Start: Navigation wrapper -->
+      <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <a href="index.html" class="brand brand-bootbus">Art Box</a>
+            <!-- Below button used for responsive navigation -->
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- Start: Primary navigation -->
+             <div class="nav-collapse collapse">        
+              <ul class="nav pull-right">
+                <li class="dropdown">
+                  <a href="japanese.html" class="dropdown-toggle" data-toggle="dropdown">Japanese<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="japanese.html">日本語</a></li>
+                  </ul>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle active-link" data-toggle="dropdown">Support<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="support.html">Support1</a></li>        
+                  </ul>                  
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="online-shop.html">My works</a></li>
+                    <li><a href="partnerships.html">Partnerships</a></li>
+                  </ul>
+                </li>
+                <li><a href="news_e/photo_news/admin.php">Log in</a></li>
+                <li><a href="contact_us.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End: Navigation wrapper -->   
+    </header>
+    <!-- End: HEADER -->
+    <!-- Start: Main content -->
+    <div class="content">     
+      <div class="container">
+        <!-- Start: support description -->
+        <article class="article"> 
+          <div class="row bottom-space">
+            <div class="span12">
+              <div class="page-header">
+                <h1>Support</h1>
+              </div>
+            </div>  
+                                   
+          </div>
+          <div class="row bottom-space">
+            <div class="span10 offset1">
+              <div class="span8 offset1">
+                <h3>Problem or something ?</h3>
+                <ul class="features">
+                  <li>
+                    You may find my blog <i class="icon-ok "><a href="../hitomishiri/">サイト製作のメモ</a></i>
+                  </li> 
+                </ul>
+              </div>                                              
+            </div>      
+          </div>
+          <div class="row">
+            <div class="span10 offset1">
+              <div class="span3">                 
+               <h5>i love to use</h5>   
+                  <p>
+                    <img src="img/icon_il.png" width="50" height="56">  Illustrator
+                  </p> 
+                  <p>
+                    <img src="img/icon_ps.png" width="50" height="53">  Photoshop
+                  </p>
+                  <br />
+                  <br />
+               <h5>Personal Interest</h5>  
+                 <p>
+                    <a class="btn btn-large btn-block" href="http://www.strikingly.com/smartmuse">Smart Muse PJ </a>
+                 </p>
+               <div id="slideshow">
+				  <img src="image/forest.jpg" width="300" height="100" class="thumbnail product-snap" class="active" />
+				  <img src="image/ashley.png" width="300" height="100" alt="myart"/>
+				  <img src="image/Gentleman'.jpg" width="300" height="100" alt="myart" />
+				  <!--<img src="image/shinsaibashi.jpg" width="300" height="100" alt="myart" />
+				  <img src="image/blue.JPG" width="300" height="100" alt="myart" />-->
+			   </div> 
+
+                </div>    
+              </div>             
+          </div>
+        </article>
+        <!-- End: support description -->
+      </div>
+    </div>
+    </div>
+    <!-- End: Main content -->
+    <!-- Start: FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="span2">
+           <!-- <h4><i class="icon-cogs icon-white"></i> Support</h4>
+            <nav>
+              <ul class="quick-links">
+               <li><a href="../artist_admin"><img src="../blog_box/wp-content/uploads/2014/08/mlma.png" width="340" height="290"></a></li>          
+              </ul>
+            </nav>-->
+          </div>
+          <div class="span2">
+            <h4><i class="icon-beaker icon-white"></i> About</h4>
+            <nav>
+              <ul class="quick-links">
+                <li><a href="our_works.html">My Arts</a></li>
+                <li><a href="partnerships.html">Partnerships</a></li>
+              <ul>
+            </nav>          
+          </div>
+          <div class="span2">
+            
+            <h4><i class="icon-legal icon-white"></i> Legal</h4>
+            <nav>
+              <ul class="quick-links">
+                <li><a href="license.html">License</a></li>
+                <li><a href="pripoli.html">Privacy Policy</a></li>  
+              </ul>
+            </nav>            
+          </div>
+          <div class="span3">
+            <h4>Get in touch</h4>
+            <div class="social-icons-row">
+              <a href="http://www.twitter.com/ArtistBoxStanda"><i class="icon-twitter"></i></a>
+              <a href="http://www.linkedin.com/profile/view?id=329780403&trk=nav_responsive_tab_profile"><i class="icon-linkedin"></i></a>                                         
+			  <a href="https://plus.google.com/u/0/105993846508985575507/posts"><i class="icon-google-plus"></i></a>            
+              <a href="https://github.com/yukyco"><i class="icon-github"></i></a>      
+            </div>            
+          </div>      
+          <div class="span3">
+            <h4>Subscribe</h4>
+             <a href="subform.html"><img src="img/mente.jpg" width: 230px; alt="Email" / onmouseover="this.src='img/btn2_ov.png'" onmouseout="this.src='img/btn2.png'"></a>
+          </div> 
+        </div>
+      </div>
+      <hr class="footer">
+      <div class="container">
+        <p>
+          &copy; 2014 <a href="#">Art Box</a> &nbsp;&nbsp;&nbsp;
+         <align="right">Design by <a href="http://jobpixels.com/" target="_blank">Jobpixels</a></p>
+      </div>
+    </footer>
+    <!-- End: FOOTER -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/boot-business.js"></script>
+  </body>
+</html>

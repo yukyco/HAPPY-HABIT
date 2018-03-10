@@ -1,0 +1,18 @@
+.snowfall {
+    width: 100％;
+    -height:100%;
+    background-color: #6a5acd;
+    background-image: url('http://jsrun.it/assets/u/i/4/I/ui4IF.png'),
+        url('http://jsrun.it/assets/m/f/u/U/mfuUa.png'),
+        url('http://jsrun.it/assets/M/z/Z/Y/MzZY8.png');
+    -webkit-animation: snow 20s linear infinite;
+    animation: snow 20s linear infinite;
+}
+@-webkit-keyframes snow {
+    0% {background-position: 0 0, 0 0, 0 0;}
+    100% {background-position: 0 500px, 0 300px, 0 400px;}
+}
+@keyframes snow {
+    0% {background-position: 0 0, 0 0, 0 0;}
+    100% {background-position: 0 500px, 0 300px, 0 400px;}
+}
