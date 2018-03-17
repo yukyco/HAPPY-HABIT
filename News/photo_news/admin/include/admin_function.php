@@ -168,7 +168,7 @@ a:visited {
 </head>
 <body id="auth">{$error}
 <div id="login_form">
-<p class="taC"> Welcome to Art Box 2.0<br />You are the best !</p>
+<p class="taC"> Welcome to Art Box Standard <br />You are the best !</p>
 <form action="" method="post">
 <label for="userid">ユーザーID</label>
 <input class="input" type="text" name="userid" id="userid" value="" style="ime-mode:disabled" />
